@@ -110,28 +110,7 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer
-        className="relative py-8 overflow-hidden"
-        style={{ backgroundImage: `url(${BG})`, backgroundSize: "cover", backgroundPosition: "center bottom" }}
-      >
-        <div className="absolute inset-0 bg-[hsl(220,60%,18%)]/75 backdrop-blur-sm" />
-        <div className="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-7 h-7 bg-[hsl(280,70%,55%)] flex items-center justify-center">
-              <Icon name="Briefcase" size={13} className="text-white" />
-            </div>
-            <span className="font-montserrat font-bold text-white text-sm">КарьераПро</span>
-          </div>
-          <p className="text-white/40 text-xs text-center">
-            © 2024 КарьераПро. Все вакансии соответствуют требованиям ТК РФ.
-          </p>
-          <div className="flex items-center gap-1 text-xs text-white/40">
-            <Icon name="Shield" size={12} className="text-[hsl(300,80%,80%)]" />
-            <span>Официальный работодатель</span>
-          </div>
-        </div>
-      </footer>
+
     </>
   );
 }

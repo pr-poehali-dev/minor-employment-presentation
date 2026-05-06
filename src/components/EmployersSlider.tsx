@@ -10,10 +10,10 @@ export default function EmployersSlider() {
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="mb-10 text-center">
           <p className="text-[hsl(280,70%,45%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
-            Работодатели
+            Где можно работать
           </p>
           <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl inline-block gold-line">
-            Предприятия реального сектора
+            Компании и организации района
           </h2>
         </div>
       </div>

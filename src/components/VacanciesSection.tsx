@@ -269,14 +269,7 @@ export default function VacanciesSection({ activeVacancy, setActiveVacancy }: Va
                         </div>
                       </div>
                     </div>
-                    <a
-                      href="#контакты"
-                      className="mt-4 flex items-center justify-center gap-2 bg-[hsl(220,60%,18%)] text-white w-full py-3 text-sm font-montserrat font-bold tracking-wide hover:bg-[hsl(280,70%,45%)] transition-colors duration-200 shadow-md"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Icon name="Send" size={15} />
-                      Откликнуться на эту вакансию
-                    </a>
+
                   </div>
                 )}
 

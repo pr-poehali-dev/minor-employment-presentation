@@ -177,11 +177,11 @@ export default function VacanciesSection({ activeVacancy, setActiveVacancy }: Va
     >
       <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
       <div className="relative max-w-6xl mx-auto px-6">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <p className="text-[hsl(280,70%,45%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
             Актуальные позиции
           </p>
-          <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl gold-line">
+          <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl inline-block gold-line">
             Открытые вакансии
           </h2>
         </div>

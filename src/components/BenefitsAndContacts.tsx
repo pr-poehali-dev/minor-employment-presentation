@@ -52,43 +52,6 @@ interface BenefitsAndContactsProps {
 export default function BenefitsAndContacts({ formData, handleFormChange }: BenefitsAndContactsProps) {
   return (
     <>
-      {/* BENEFITS */}
-      <section
-        id="преимущества"
-        className="relative py-20 overflow-hidden"
-        style={{ backgroundImage: `url(${BG})`, backgroundSize: "cover", backgroundPosition: "center 40%" }}
-      >
-        <div className="absolute inset-0 bg-[hsl(220,60%,18%)]/60 backdrop-blur-[1px]" />
-        <div className="relative max-w-6xl mx-auto px-6">
-          <div className="mb-12">
-            <p className="text-[hsl(180,80%,75%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
-              Почему мы
-            </p>
-            <h2 className="font-montserrat font-black text-white text-3xl md:text-4xl">
-              Преимущества{" "}
-              <span className="text-[hsl(300,80%,80%)]">работодателя</span>
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
-            {benefits.map((b) => (
-              <div
-                key={b.title}
-                className="bg-white/10 backdrop-blur-sm p-8 hover:bg-white/20 transition-colors duration-300 group border border-white/10 hover:border-white/30"
-              >
-                <div className="w-12 h-12 border border-white/30 flex items-center justify-center mb-5 group-hover:border-[hsl(300,80%,80%)] transition-colors duration-300">
-                  <Icon name={b.icon} size={22} className="text-[hsl(300,80%,85%)]" />
-                </div>
-                <h3 className="font-montserrat font-bold text-white text-base mb-3 leading-snug">
-                  {b.title}
-                </h3>
-                <p className="text-white/65 text-sm leading-relaxed">{b.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* LEGAL INFO */}
       <section
         className="relative py-16 overflow-hidden"

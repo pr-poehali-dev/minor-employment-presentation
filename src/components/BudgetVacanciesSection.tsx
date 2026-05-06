@@ -61,7 +61,7 @@ export default function BudgetVacanciesSection() {
             Актуальные позиции
           </p>
           <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl inline-block gold-line">
-            Предприятия бюджетной сферы
+            Предприятий бюджетной сферы
           </h2>
         </div>
 

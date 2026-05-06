@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
+import EmployersSlider from "@/components/EmployersSlider";
 import VacanciesSection from "@/components/VacanciesSection";
 import BenefitsAndContacts from "@/components/BenefitsAndContacts";
 
@@ -22,6 +23,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background font-ibm">
       <HeroSection />
+      <EmployersSlider />
       <VacanciesSection activeVacancy={activeVacancy} setActiveVacancy={setActiveVacancy} />
       <BenefitsAndContacts formData={formData} handleFormChange={handleFormChange} />
     </div>

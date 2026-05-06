@@ -1,20 +1,5 @@
 const BG = "https://cdn.poehali.dev/projects/34828b05-bf09-4644-97e2-763bce786a33/bucket/d7a38919-9c98-4036-89e6-a39fba50f7e0.png";
 
-const employers = [
-  "ООО «КомандаГорький НН»",
-  "ИП Шамонин М.М.",
-  "ООО «Стройсервис»",
-  "ООО «ГеоМакс-НН»",
-  "ООО «Артель лес»",
-  "ООО «Метрополь»",
-  "ООО «БиоЭнергия»",
-  "ООО «НижЛесКом»",
-  "ПК «Воскресенский Кооператор»",
-  "ИП Миронов В.Б.",
-  "ООО «Рельеф»",
-  "ООО «Агрокомбинат «Ветлужский»",
-];
-
 export default function EmployersSlider() {
   return (
     <section
@@ -30,17 +15,6 @@ export default function EmployersSlider() {
           <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl gold-line">
             Предприятия реального сектора
           </h2>
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          {employers.map((name, i) => (
-            <div
-              key={i}
-              className="bg-white/70 backdrop-blur-sm border border-white/60 px-5 py-3 text-[hsl(220,60%,14%)] font-montserrat font-semibold text-sm shadow-sm"
-            >
-              {name}
-            </div>
-          ))}
         </div>
       </div>
     </section>

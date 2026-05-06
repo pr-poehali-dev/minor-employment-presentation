@@ -1,6 +1,8 @@
 import Icon from "@/components/ui/icon";
 import { vacancies } from "@/components/VacanciesSection";
 
+const BG = "https://cdn.poehali.dev/projects/34828b05-bf09-4644-97e2-763bce786a33/bucket/d7a38919-9c98-4036-89e6-a39fba50f7e0.png";
+
 const benefits = [
   {
     icon: "ShieldCheck",
@@ -51,15 +53,20 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
   return (
     <>
       {/* BENEFITS */}
-      <section id="преимущества" className="py-20 bg-[hsl(220,60%,18%)]">
-        <div className="max-w-6xl mx-auto px-6">
+      <section
+        id="преимущества"
+        className="relative py-20 overflow-hidden"
+        style={{ backgroundImage: `url(${BG})`, backgroundSize: "cover", backgroundPosition: "center 40%" }}
+      >
+        <div className="absolute inset-0 bg-[hsl(220,60%,18%)]/60 backdrop-blur-[1px]" />
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-[hsl(45,90%,58%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
+            <p className="text-[hsl(180,80%,75%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
               Почему мы
             </p>
             <h2 className="font-montserrat font-black text-white text-3xl md:text-4xl">
               Преимущества{" "}
-              <span className="text-[hsl(45,90%,58%)]">работодателя</span>
+              <span className="text-[hsl(300,80%,80%)]">работодателя</span>
             </h2>
           </div>
 
@@ -67,15 +74,15 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="bg-[hsl(220,60%,18%)] p-8 hover:bg-[hsl(220,55%,23%)] transition-colors duration-300 group"
+                className="bg-white/10 backdrop-blur-sm p-8 hover:bg-white/20 transition-colors duration-300 group border border-white/10 hover:border-white/30"
               >
-                <div className="w-12 h-12 border border-[hsl(45,90%,58%)]/40 flex items-center justify-center mb-5 group-hover:border-[hsl(45,90%,58%)] transition-colors duration-300">
-                  <Icon name={b.icon} size={22} className="text-[hsl(45,90%,58%)]" />
+                <div className="w-12 h-12 border border-white/30 flex items-center justify-center mb-5 group-hover:border-[hsl(300,80%,80%)] transition-colors duration-300">
+                  <Icon name={b.icon} size={22} className="text-[hsl(300,80%,85%)]" />
                 </div>
                 <h3 className="font-montserrat font-bold text-white text-base mb-3 leading-snug">
                   {b.title}
                 </h3>
-                <p className="text-white/55 text-sm leading-relaxed">{b.desc}</p>
+                <p className="text-white/65 text-sm leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -83,8 +90,12 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
       </section>
 
       {/* LEGAL INFO */}
-      <section className="py-16 bg-secondary/50">
-        <div className="max-w-6xl mx-auto px-6">
+      <section
+        className="relative py-16 overflow-hidden"
+        style={{ backgroundImage: `url(${BG})`, backgroundSize: "cover", backgroundPosition: "center 60%" }}
+      >
+        <div className="absolute inset-0 bg-white/55 backdrop-blur-[2px]" />
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -115,17 +126,17 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                 ],
               },
             ].map((block) => (
-              <div key={block.title} className="bg-white border border-border p-6">
+              <div key={block.title} className="bg-white/70 backdrop-blur-sm border border-white/60 p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <Icon name={block.icon} size={18} className="text-[hsl(220,60%,18%)]" />
-                  <h3 className="font-montserrat font-bold text-foreground text-sm uppercase tracking-wide">
+                  <Icon name={block.icon} size={18} className="text-[hsl(280,70%,45%)]" />
+                  <h3 className="font-montserrat font-bold text-[hsl(220,60%,14%)] text-sm uppercase tracking-wide">
                     {block.title}
                   </h3>
                 </div>
                 <ul className="space-y-2">
                   {block.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-foreground/70">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[hsl(45,90%,58%)] mt-1.5 shrink-0" />
+                    <li key={item} className="flex items-start gap-2 text-sm text-[hsl(220,40%,30%)]">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[hsl(280,70%,55%)] mt-1.5 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -137,17 +148,22 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
       </section>
 
       {/* CONTACTS */}
-      <section id="контакты" className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-6">
+      <section
+        id="контакты"
+        className="relative py-20 overflow-hidden"
+        style={{ backgroundImage: `url(${BG})`, backgroundSize: "cover", backgroundPosition: "center bottom" }}
+      >
+        <div className="absolute inset-0 bg-white/45 backdrop-blur-[2px]" />
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <p className="text-[hsl(45,90%,45%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
+              <p className="text-[hsl(280,70%,45%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
                 Связаться с нами
               </p>
-              <h2 className="font-montserrat font-black text-foreground text-3xl md:text-4xl mb-6 gold-line">
+              <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl mb-6 gold-line">
                 Подать заявку
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-10">
+              <p className="text-[hsl(220,40%,35%)] text-base leading-relaxed mb-10">
                 Заполните форму, и наш HR-менеджер свяжется с вами в течение одного
                 рабочего дня. Родители могут заполнить форму от имени подростка.
               </p>
@@ -174,28 +190,28 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                   },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 border border-border flex items-center justify-center shrink-0">
-                      <Icon name={c.icon} size={16} className="text-[hsl(220,60%,18%)]" />
+                    <div className="w-10 h-10 border border-white/60 bg-white/50 backdrop-blur-sm flex items-center justify-center shrink-0 shadow-sm">
+                      <Icon name={c.icon} size={16} className="text-[hsl(280,70%,45%)]" />
                     </div>
                     <div>
-                      <div className="text-[10px] font-montserrat font-bold uppercase tracking-widest text-muted-foreground mb-0.5">
+                      <div className="text-[10px] font-montserrat font-bold uppercase tracking-widest text-[hsl(220,40%,50%)] mb-0.5">
                         {c.label}
                       </div>
-                      <div className="font-medium text-foreground">{c.value}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">{c.sub}</div>
+                      <div className="font-medium text-[hsl(220,60%,14%)]">{c.value}</div>
+                      <div className="text-xs text-[hsl(220,40%,45%)] mt-0.5">{c.sub}</div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-white border border-border p-8">
-              <h3 className="font-montserrat font-bold text-foreground text-lg mb-6">
+            <div className="bg-white/70 backdrop-blur-sm border border-white/60 p-8 shadow-md">
+              <h3 className="font-montserrat font-bold text-[hsl(220,60%,14%)] text-lg mb-6">
                 Форма обратной связи
               </h3>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-foreground/60 mb-1.5">
+                  <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-[hsl(220,40%,45%)] mb-1.5">
                     Имя и фамилия *
                   </label>
                   <input
@@ -204,12 +220,12 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                     value={formData.name}
                     onChange={handleFormChange}
                     placeholder="Иван Иванов"
-                    className="w-full border border-border px-4 py-3 text-sm focus:outline-none focus:border-[hsl(220,60%,18%)] transition-colors bg-background"
+                    className="w-full border border-white/60 bg-white/60 px-4 py-3 text-sm focus:outline-none focus:border-[hsl(280,70%,45%)] transition-colors backdrop-blur-sm text-[hsl(220,60%,14%)] placeholder:text-[hsl(220,40%,60%)]"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-foreground/60 mb-1.5">
+                    <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-[hsl(220,40%,45%)] mb-1.5">
                       Возраст *
                     </label>
                     <input
@@ -220,11 +236,11 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                       placeholder="16"
                       min="14"
                       max="18"
-                      className="w-full border border-border px-4 py-3 text-sm focus:outline-none focus:border-[hsl(220,60%,18%)] transition-colors bg-background"
+                      className="w-full border border-white/60 bg-white/60 px-4 py-3 text-sm focus:outline-none focus:border-[hsl(280,70%,45%)] transition-colors backdrop-blur-sm text-[hsl(220,60%,14%)] placeholder:text-[hsl(220,40%,60%)]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-foreground/60 mb-1.5">
+                    <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-[hsl(220,40%,45%)] mb-1.5">
                       Телефон *
                     </label>
                     <input
@@ -233,19 +249,19 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                       value={formData.phone}
                       onChange={handleFormChange}
                       placeholder="+7 (___) ___-__-__"
-                      className="w-full border border-border px-4 py-3 text-sm focus:outline-none focus:border-[hsl(220,60%,18%)] transition-colors bg-background"
+                      className="w-full border border-white/60 bg-white/60 px-4 py-3 text-sm focus:outline-none focus:border-[hsl(280,70%,45%)] transition-colors backdrop-blur-sm text-[hsl(220,60%,14%)] placeholder:text-[hsl(220,40%,60%)]"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-foreground/60 mb-1.5">
+                  <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-[hsl(220,40%,45%)] mb-1.5">
                     Вакансия
                   </label>
                   <select
                     name="vacancy"
                     value={formData.vacancy}
                     onChange={handleFormChange}
-                    className="w-full border border-border px-4 py-3 text-sm focus:outline-none focus:border-[hsl(220,60%,18%)] transition-colors bg-background appearance-none cursor-pointer"
+                    className="w-full border border-white/60 bg-white/60 px-4 py-3 text-sm focus:outline-none focus:border-[hsl(280,70%,45%)] transition-colors backdrop-blur-sm appearance-none cursor-pointer text-[hsl(220,60%,14%)]"
                   >
                     <option value="">Выберите вакансию</option>
                     {vacancies.map((v) => (
@@ -256,7 +272,7 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-foreground/60 mb-1.5">
+                  <label className="block text-xs font-montserrat font-semibold uppercase tracking-wide text-[hsl(220,40%,45%)] mb-1.5">
                     Комментарий
                   </label>
                   <textarea
@@ -265,17 +281,17 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
                     onChange={handleFormChange}
                     rows={3}
                     placeholder="Расскажите о себе или задайте вопрос..."
-                    className="w-full border border-border px-4 py-3 text-sm focus:outline-none focus:border-[hsl(220,60%,18%)] transition-colors bg-background resize-none"
+                    className="w-full border border-white/60 bg-white/60 px-4 py-3 text-sm focus:outline-none focus:border-[hsl(280,70%,45%)] transition-colors backdrop-blur-sm resize-none text-[hsl(220,60%,14%)] placeholder:text-[hsl(220,40%,60%)]"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[hsl(220,60%,18%)] text-[hsl(45,90%,58%)] py-3.5 font-montserrat font-bold text-sm tracking-wide hover:bg-[hsl(220,55%,23%)] transition-colors duration-200 flex items-center justify-center gap-2"
+                  className="w-full bg-[hsl(220,60%,18%)] text-white py-3.5 font-montserrat font-bold text-sm tracking-wide hover:bg-[hsl(280,70%,45%)] transition-colors duration-200 flex items-center justify-center gap-2 shadow-md"
                 >
                   <Icon name="Send" size={15} />
                   Отправить заявку
                 </button>
-                <p className="text-[10px] text-muted-foreground text-center">
+                <p className="text-[10px] text-[hsl(220,40%,50%)] text-center">
                   Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
                 </p>
               </form>
@@ -285,19 +301,23 @@ export default function BenefitsAndContacts({ formData, handleFormChange }: Bene
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[hsl(220,60%,12%)] py-8">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer
+        className="relative py-8 overflow-hidden"
+        style={{ backgroundImage: `url(${BG})`, backgroundSize: "cover", backgroundPosition: "center bottom" }}
+      >
+        <div className="absolute inset-0 bg-[hsl(220,60%,18%)]/75 backdrop-blur-sm" />
+        <div className="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 bg-[hsl(45,90%,58%)] flex items-center justify-center">
-              <Icon name="Briefcase" size={13} className="text-[hsl(220,60%,18%)]" />
+            <div className="w-7 h-7 bg-[hsl(280,70%,55%)] flex items-center justify-center">
+              <Icon name="Briefcase" size={13} className="text-white" />
             </div>
             <span className="font-montserrat font-bold text-white text-sm">КарьераПро</span>
           </div>
-          <p className="text-white/35 text-xs text-center">
+          <p className="text-white/40 text-xs text-center">
             © 2024 КарьераПро. Все вакансии соответствуют требованиям ТК РФ.
           </p>
-          <div className="flex items-center gap-1 text-xs text-white/35">
-            <Icon name="Shield" size={12} className="text-[hsl(45,90%,58%)]" />
+          <div className="flex items-center gap-1 text-xs text-white/40">
+            <Icon name="Shield" size={12} className="text-[hsl(300,80%,80%)]" />
             <span>Официальный работодатель</span>
           </div>
         </div>

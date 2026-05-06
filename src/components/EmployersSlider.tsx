@@ -8,11 +8,11 @@ export default function EmployersSlider() {
     >
       <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
       <div className="relative max-w-6xl mx-auto px-6">
-        <div className="mb-10">
+        <div className="mb-10 text-center">
           <p className="text-[hsl(280,70%,45%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
             Работодатели
           </p>
-          <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl gold-line">
+          <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl inline-block gold-line">
             Предприятия реального сектора
           </h2>
         </div>

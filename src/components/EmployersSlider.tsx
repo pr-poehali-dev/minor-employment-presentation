@@ -45,7 +45,7 @@ export default function EmployersSlider() {
   }, [paused]);
 
   return (
-    <section className="py-14 bg-[hsl(220,60%,14%)] overflow-hidden">
+    <section className="py-14 bg-[hsl(220,60%,14%)] overflow-hidden border-0">
       <div className="max-w-6xl mx-auto px-6 mb-8">
         <p className="text-[hsl(45,90%,55%)] text-xs font-medium tracking-widest uppercase mb-3 font-montserrat">
           Работодатели

@@ -13,7 +13,7 @@ export default function EmployersSlider() {
             Работодатели
           </p>
           <h2 className="font-montserrat font-black text-[hsl(220,60%,14%)] text-3xl md:text-4xl inline-block gold-line">
-            Предприятий реального сектора
+            Предприятия реального сектора
           </h2>
         </div>
       </div>

@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import EmployersSlider from "@/components/EmployersSlider";
 import VacanciesSection from "@/components/VacanciesSection";
 import BudgetVacanciesSection from "@/components/BudgetVacanciesSection";
+import RightsSection from "@/components/RightsSection";
 import BenefitsAndContacts from "@/components/BenefitsAndContacts";
 
 export default function Index() {
@@ -27,6 +28,7 @@ export default function Index() {
       <EmployersSlider />
       <VacanciesSection activeVacancy={activeVacancy} setActiveVacancy={setActiveVacancy} />
       <BudgetVacanciesSection />
+      <RightsSection />
       <BenefitsAndContacts formData={formData} handleFormChange={handleFormChange} />
     </div>
   );

@@ -13,7 +13,7 @@ export default function HeroSection() {
         <img
           src="https://cdn.poehali.dev/projects/34828b05-bf09-4644-97e2-763bce786a33/bucket/83007e92-64e1-429f-aff3-f77dd92e5a37.jpg"
           alt=""
-          className="absolute left-0 top-0 h-full w-1/2 object-cover object-right"
+          className="absolute left-0 top-0 h-full w-1/2 object-contain object-left-bottom"
           style={{ mixBlendMode: "multiply" }}
         />
 

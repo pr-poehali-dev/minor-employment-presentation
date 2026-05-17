@@ -22,7 +22,7 @@ const vacancies = [
     title: "Помощник флориста",
     department: "ИП Колотушкина А.М. · д. Задворка, Воскресенский м.о.",
     minAge: 16,
-    hours: "0,5 ставки",
+    hours: "Летний период",
     type: "Флористика",
     salary: "13 546,5 ₽/мес",
     description:

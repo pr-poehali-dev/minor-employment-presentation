@@ -5,7 +5,7 @@ const BG = "https://cdn.poehali.dev/projects/34828b05-bf09-4644-97e2-763bce786a3
 const vacancies = [
   {
     id: 1,
-    title: "Горничная / Помощник повара / Гид",
+    title: "Горничная\nПомощник повара\nГид",
     department: "ООО \"КомандаГорький-НН\" · с. Богородское, Воскресенский м.о.",
     minAge: 14,
     hours: "Летний период",
@@ -69,7 +69,7 @@ export default function VacanciesSection({ activeVacancy, setActiveVacancy }: Va
               <div className="p-6 border-b border-white/50">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div>
-                    <h3 className="font-montserrat font-bold text-[hsl(220,60%,14%)] text-lg leading-tight group-hover:text-[hsl(280,70%,45%)] transition-colors">
+                    <h3 className="font-montserrat font-bold text-[hsl(220,60%,14%)] text-lg leading-tight group-hover:text-[hsl(280,70%,45%)] transition-colors whitespace-pre-line">
                       {v.title}
                     </h3>
                     <p className="text-[hsl(220,40%,40%)] text-sm mt-1">{v.department}</p>

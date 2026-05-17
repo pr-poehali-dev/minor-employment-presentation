@@ -3,7 +3,22 @@ import Icon from "@/components/ui/icon";
 
 const BG = "https://cdn.poehali.dev/projects/34828b05-bf09-4644-97e2-763bce786a33/bucket/d7a38919-9c98-4036-89e6-a39fba50f7e0.png";
 
-const vacancies: never[] = [];
+const vacancies = [
+  {
+    id: 1,
+    title: "• Благоустройство территории\n• Ремонт мебели",
+    department: "МОУ Воздвиженская СШ · с. Воздвиженское, Школьная ул., д. 15",
+    minAge: 14,
+    hours: "Июнь",
+    type: "Благоустройство",
+    salary: "6 719,5 ₽/мес",
+    description:
+      "Работа в июне на летний период:\n• Благоустройство территории;\n• Ремонт мебели.\n\nРаботодатель: МОУ Воздвиженская СШ\nАдрес: Нижегородская область, Воскресенский м.о., с. Воздвиженское, Школьная ул., д. 15",
+    tags: [],
+    restrictions: "С 14 лет при наличии письменного согласия родителей. Не более 4 ч/день в период учёбы.",
+    contact: "8 (952) 469-88-38 — Смирнова Татьяна Михайловна",
+  },
+];
 
 export default function BudgetVacanciesSection() {
   const [activeVacancy, setActiveVacancy] = useState<number | null>(null);
@@ -36,7 +51,7 @@ export default function BudgetVacanciesSection() {
               <div className="p-6 border-b border-white/50">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div>
-                    <h3 className="font-montserrat font-bold text-[hsl(220,60%,14%)] text-lg leading-tight group-hover:text-[hsl(280,70%,45%)] transition-colors">
+                    <h3 className="font-montserrat font-bold text-[hsl(220,60%,14%)] text-lg leading-tight group-hover:text-[hsl(280,70%,45%)] transition-colors whitespace-pre-line">
                       {v.title}
                     </h3>
                     <p className="text-[hsl(220,40%,40%)] text-sm mt-1">{v.department}</p>
@@ -45,16 +60,18 @@ export default function BudgetVacanciesSection() {
                     {v.salary}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {v.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-white/60 border border-white/80 text-[hsl(220,60%,25%)] text-xs px-2.5 py-1 font-medium backdrop-blur-sm"
+                {v.contact && (
+                  <div className="flex items-center gap-2 mt-3">
+                    <Icon name="Phone" size={14} className="text-[hsl(280,70%,45%)] shrink-0" />
+                    <a
+                      href={`tel:${v.contact.replace(/\D/g, "")}`}
+                      className="text-sm font-montserrat font-bold text-[hsl(220,60%,14%)] hover:text-[hsl(280,70%,45%)] transition-colors"
+                      onClick={(e) => e.stopPropagation()}
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                      {v.contact}
+                    </a>
+                  </div>
+                )}
               </div>
 
               <div className="p-6">

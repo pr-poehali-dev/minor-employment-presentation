@@ -5,7 +5,7 @@ const BG = "https://cdn.poehali.dev/projects/34828b05-bf09-4644-97e2-763bce786a3
 const vacancies = [
   {
     id: 1,
-    title: "Горничная\nПомощник повара\nГид",
+    title: "• Горничная\n• Помощник повара\n• Гид",
     department: "ООО \"КомандаГорький-НН\" · с. Богородское, Воскресенский м.о.",
     minAge: 14,
     hours: "Летний период",

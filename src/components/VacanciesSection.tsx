@@ -15,6 +15,7 @@ const vacancies = [
       "Три позиции на летний период:\n• Горничная — уборка номеров и общих зон, комфортные условия;\n• Помощник повара — подготовка ингредиентов, сервировка, обучение на месте;\n• Гид — проведение экскурсий по Воскресенскому району, общение с гостями.\n\nРаботодатель: ООО «КомандаГорький-НН»\nАдрес: Нижегородская область, Воскресенский м.о., с. Богородское\n\nКонтакт ответственного лица: 8 (920) 077-08-80",
     tags: ["Летний период", "Без опыта"],
     restrictions: "С 14 лет при наличии письменного согласия родителей. Не более 4 ч/день в период учёбы.",
+    contact: "8 (920) 077-08-80",
   },
 ];
 
@@ -73,6 +74,18 @@ export default function VacanciesSection({ activeVacancy, setActiveVacancy }: Va
                     </span>
                   ))}
                 </div>
+                {v.contact && (
+                  <div className="flex items-center gap-2 mt-3">
+                    <Icon name="Phone" size={14} className="text-[hsl(280,70%,45%)] shrink-0" />
+                    <a
+                      href={`tel:${v.contact.replace(/\D/g, "")}`}
+                      className="text-sm font-montserrat font-bold text-[hsl(220,60%,14%)] hover:text-[hsl(280,70%,45%)] transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {v.contact}
+                    </a>
+                  </div>
+                )}
               </div>
 
               <div className="p-6">

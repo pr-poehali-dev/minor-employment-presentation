@@ -64,16 +64,6 @@ export default function VacanciesSection({ activeVacancy, setActiveVacancy }: Va
                     {v.salary}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {v.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-white/60 border border-white/80 text-[hsl(220,60%,25%)] text-xs px-2.5 py-1 font-medium backdrop-blur-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
                 {v.contact && (
                   <div className="flex items-center gap-2 mt-3">
                     <Icon name="Phone" size={14} className="text-[hsl(280,70%,45%)] shrink-0" />

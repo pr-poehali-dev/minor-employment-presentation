@@ -59,7 +59,7 @@ const blocks = [
     items: [
       "При нарушениях — обратиться в Государственную инспекцию труда (ГИТ)",
       "Телефон горячей линии Роструда: 8-800-707-88-41 (бесплатно)",
-      "Жалобу можно подать онлайн: онлайнинспекция.рф",
+      "Жалобу можно подать онлайн: <a href=\"https://онлайнинспекция.рф\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline hover:text-[hsl(280,70%,45%)]\">онлайнинспекция.рф</a>",
       "Родители вправе расторгнуть договор, если работа вредит здоровью или учёбе",
     ],
   },
@@ -97,7 +97,7 @@ export default function RightsSection() {
                 {block.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-[hsl(220,40%,30%)] leading-snug">
                     <div className="w-1.5 h-1.5 rounded-full bg-[hsl(280,70%,55%)] mt-1.5 shrink-0" />
-                    {item}
+                    <span dangerouslySetInnerHTML={{ __html: item }} />
                   </li>
                 ))}
               </ul>
